@@ -11,6 +11,6 @@ resource "aws_s3_bucket" "main_bucket" {
 resource "aws_s3_bucket" "naked_bucket" {
   bucket = "${var.site}.com"
   website {
-    redirect_all_requests_to = "www.${var.site}.com"
+    redirect_all_requests_to = "${aws_s3_bucket.main_bucket.bucket}"
   }
 }
