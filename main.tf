@@ -1,5 +1,5 @@
 data "template_file" "s3_public_read" {
-  template = "${file("./policy.json")}"
+  template = "${file("${path.module}/policy.json")}"
   vars {
     site = "${var.site}"
   }
