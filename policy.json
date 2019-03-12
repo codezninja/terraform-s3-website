@@ -9,7 +9,7 @@
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::www.${site}.com/*"
+                "arn:aws:s3:::${cname}.${site}.com/*"
             ]
         }
     ]
