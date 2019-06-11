@@ -1,6 +1,6 @@
 data "template_file" "s3_public_read_www" {
   template = "${file("${path.module}/policy.json")}"
-  vars {
+  vars = {
     site = "${var.site}"
     cname = "www"
   }
@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "main_bucket" {
 
 data "template_file" "s3_public_read_staging" {
   template = "${file("${path.module}/policy.json")}"
-  vars {
+  vars = {
     site = "${var.site}"
     cname = "staging"
   }
