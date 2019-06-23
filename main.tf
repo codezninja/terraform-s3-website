@@ -31,8 +31,8 @@ resource "aws_s3_bucket" "staging_bucket" {
   policy = "${data.template_file.s3_public_read_staging.rendered}"
 
   website {
-    index_document = "index.html"
-    error_document = "error.html"
+    index_document = "${var.index_document}"
+    error_document = "${var.error_document}"
   }
 }
 
