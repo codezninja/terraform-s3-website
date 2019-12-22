@@ -1,16 +1,17 @@
 variable "site" {
-  type = "string"
+  type        = string
   description = "domain name without cname"
 }
 
 variable "index_document" {
-  type = "string"
+  type        = string
   description = "s3 index document"
-  default = "index.html"
+  default     = "index.html"
 }
 
 variable "error_document" {
-  type = "string"
+  type        = string
   description = "s3 error document"
-  default = "error.html"
+  default     = "error.html"
 }
+
